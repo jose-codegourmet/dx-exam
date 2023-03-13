@@ -11,4 +11,5 @@ example:
 
 # Answers
 
-[challenge_1.js problem](./challenge_1/problem.md)
+1. [challenge_1.js problem](./challenge_1/problem.md)
+2. [challenge_2.js problem](./challenge_2/problem.md)

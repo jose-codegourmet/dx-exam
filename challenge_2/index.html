@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2 class="title">JavaScript HTML DOM</h2>
+
+    <div id="main">
+      <p>Finding HTML Elements by Tag Name</p>
+      <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+    </div>
+
+    <p id="demo"></p>
+
+    <button role="button" onclick="getPAndAddToDemo(1)">Button 1</button>
+    <button role="button" onclick="getPAndAddToDemo(2)">Button 2</button>
+
+    <script>
+      const x = document.getElementById("main");
+      const y = x.getElementsByTagName("p");
+
+      function updateDemo(str) {
+        document.getElementById("demo").innerHTML = str;
+      }
+
+      function getPAndAddToDemo(nthP) {
+        const replaceP = document.querySelectorAll(
+          `#main > p:nth-child(${nthP})`
+        );
+        updateDemo(replaceP[0].innerHTML);
+      }
+
+      updateDemo(
+        'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML
+      );
+    </script>
+  </body>
+</html>
